@@ -1,0 +1,294 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:url("winx/background.png") center/cover no-repeat fixed;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:20px;
+
+}
+
+/* CONTENEUR */
+
+.game-container{
+
+    width:100%;
+    max-width:1050px;
+
+    padding:20px 35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(6px);
+
+    border:3px solid rgba(255,255,255,.6);
+
+    border-radius:25px;
+
+    box-shadow:0 0 35px rgba(255,105,180,.35);
+
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* TITRES */
+
+h1{
+
+    display:none;
+
+}
+
+#welcome{
+
+    font-family:"Georgia",serif;
+
+    font-size:32px;
+
+    color:#d93f83;
+
+    font-weight:bold;
+
+    margin-bottom:6px;
+
+}
+
+#welcome::before{
+
+    content:"🦋 ";
+
+}
+
+#welcome::after{
+
+    content:" 🦋";
+
+}
+
+.infos{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    width:100%;
+
+    margin:20px 0 30px;
+
+}
+#welcome{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:32px;
+
+    color:#d93f83;
+
+    margin-top:10px;
+
+}
+.subtitle{
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:22px;
+
+    color:#c54d83;
+
+    margin-bottom:25px;
+
+}
+
+
+/* BOITES INFOS */
+
+.infos p{
+
+    width:120px;
+
+    background:rgba(255,255,255,.45);
+
+    border:2px solid #f8b4cf;
+
+    border-radius:18px;
+
+    padding:10px;
+
+    color:#c92d73;
+
+    font-weight:bold;
+
+    box-shadow:0 3px 10px rgba(255,105,180,.2);
+
+}
+
+.infos span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:34px;
+
+}
+
+/* RETOUR */
+
+.home-btn{
+
+    float:left;
+
+    margin-top:0;
+
+    padding:10px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(#ff8bbd,#ff4f97);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 10px rgba(255,20,147,.3);
+
+}
+
+.home-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* GRILLE */
+
+.board{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,150px);
+
+    justify-content:center;
+
+    gap:14px;
+
+}
+
+/* CARTES */
+
+.memory-card{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:white;
+
+    border:3px solid #ff5fa8;
+
+    box-shadow:0 4px 10px rgba(255,105,180,.25);
+
+    transition:.25s;
+
+}
+
+.memory-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.memory-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* BOUTON REJOUER */
+
+button:not(.home-btn){
+
+    margin-top:30px;
+
+    padding:14px 40px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:linear-gradient(#ff8fc1,#ff4b95);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 12px rgba(255,20,147,.35);
+
+}
+
+button:not(.home-btn):hover{
+
+    transform:scale(1.05);
+
+}
+.subtitle{
+
+    color:#c54d83;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+
+}
+.game-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}

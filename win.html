@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Victoire</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+/* BACKGROUND WINX */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("winx/background.png") center/cover no-repeat;
+}
+
+/* CARD WIN */
+.win-box {
+    text-align: center;
+
+    padding: 35px;
+    width: 360px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+}
+
+/* TITLE */
+h1 {
+    font-size: 45px;
+    color: #ff4fa3;
+    text-shadow: 0 0 10px hotpink;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+p {
+    font-size: 20px;
+    color: #d64b8a;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+button {
+    width: 70%;
+    padding: 14px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(#ff8fc0, #ff4f98);
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    box-shadow: 0 5px 12px rgba(255, 20, 147, 0.35);
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ff1f82;
+}
+</style>
+</head>
+
+<body>
+
+<div class="win-box">
+
+    <h1 id="message">🎉 Bravo !</h1>
+
+    <p>Tu as une excellente mémoire 💖</p>
+
+    <button onclick="restartGame()">Rejouer</button>
+
+</div>
+
+<script>
+// prénom dynamique
+let prenom = localStorage.getItem("prenom");
+
+if (prenom) {
+    document.getElementById("message").innerHTML =
+        "🎉 Bravo " + prenom + " !";
+}
+
+// rejouer
+function restartGame() {
+    window.location.href = "game.html";
+}
+</script>
+
+</body>
+</html>
